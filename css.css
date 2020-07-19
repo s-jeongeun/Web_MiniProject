@@ -1,92 +1,127 @@
+/* html{ */
+/* 	width: 100%; */
+/* 	height: 100%; */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* } */
 body{
 	width: 100%;
-	height: 1800px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 	background-image: url(./images/milkyway.jpg);
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: 80%;
+	opacity: 70%;
 	position: absolute;
 }
-div{}
-/* .bg{ */
-/* 	width: 1900px; */
-/* 	height: 1800px; */
-/* 	background-image: url(./images/milkyway.jpg); */
-/* 	background-attachment: fixed; */
-/* 	background-position: center; */
-/* 	opacity: 90%; */
-/* 	z-index: 1; */
-/* 	position: absolute; */
-/* } */
+
+form, p, li{
+	
+}
+
+div{
+	width: 100%;
+	height: 100%;
+}
+
+/* 본문 상단(왼쪽) */
 .main-left{
 	width: 30%;
-  	height: 600px;
+  	height: 30%;
   	float:left;
   	margin-top: 10%;
 	margin-left: 20%;
-	position: relative;
-}
-.leftBox{
-	background-color: white;
-	opacity: 70%;
-}
-.leftContents h3{
 	text-align: center;
-	color: black;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.main-left h3{
+	text-align: center;
 	font-family: 'East Sea Dokdo', cursive;
 	font-size: 32pt;
 	font-weight: lighter;
 }
-.addrArea{
-	text-align: center;
-}
 #youtubeLink{
-	width: 300px;
+	width: 70%;
     height: 30px;
     border-radius: 5px;
     border: 1px solid red;
     color: black;
-    margin-top: 17px;
 }
 .playBtn{
-	width: 65px;
-	height: 50px;
-    background-image: url(./images/youtube_icon.png);
+	width: 60px;
+	height: 30px;
+    background-image: url(./images/youtube_logo.png);
     border: 0;
-    position: absolute;
-    margin-top: 10px;
+    background-repeat: no-repeat;
 }
+
+/*  본문 상단(오른쪽) */
 .main-rignt{
 	width: 50%;
-  	height: 600px;
-  	text-align: center;
+  	height: 30%;
   	float:left;
-  	margin-top: 150px;
-	background-color: aqua;
+  	margin-top: 10%;
+	margin-right: 20%;
+  	text-align: center;
 	position: relative;
+	background-color: rgba(255, 255, 255, 0.5);
 }
+
+/* <!-- 본문 하단 --> */
 .main-bottom{
 	width: 80%;
-  	height: 800px;
-  	float:left;
-	margin-left: 20%;
+  	height: 40%;
+	margin: auto;
 	background-color: green;
 	opacity: 80%;
 	position: relative;
-}
-.inputList{
 	text-align: center;
 }
-#trackInfo{
-	width: 500px;
+#newItem{
+	width: 60%;
     height: 30px;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid red;
     color: black;
-    margin: 30px;
 }
-.outputList{
-	text-align: center;
+#inputBtn{
+	width: 60px;
+	height: 30px;
+    background-image: url(./images/youtube_logo.png);
+    border: 0;
+    background-repeat: no-repeat;
+}
+#bookMarkCk{
+	width: 200px;
+/* 	font-family: 'East Sea Dokdo', cursive; */
+	font-size: 10pt;
+}
+#bookMarks{
+	list-style-type: none;
+	text-align: left;
+	padding-left: 10%;
+	padding-right: 10%;
+	
+}
+.move{
+	width: 20px;
+	height: 20px;
+    background-image: url(./images/youtube_logo.png);
+    background-size: cover;
+    border: 0;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+}
+.delete{
+	width: 20px;
+	height: 20px;
+    background-image: url(./images/delete.png);
+    background-size: cover;
+    border: 0;
+    margin-left: 5px;
+    background-repeat: no-repeat;
 }

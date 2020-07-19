@@ -8,19 +8,13 @@
 <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<!-- 배경 -->
-	<div class="bg"></div>
-	
 	<!-- 본문 상단(왼쪽) -->
 	<div class="main-left">
-		<div class="leftBox"></div>
-		<div class="leftContents">
-			<h3>Youtube Book Mark Manager</h3>
-			<form class ="addrArea" action="#">
-				<input id="youtubeLink" type="text" placeholder="동영상링크를 붙여 넣어 주세요" />
-				<input class="playBtn" type="button" value="" onclick="loadYtb()">
-			</form>
-		</div>
+		<h3>Youtube Book Mark Manager</h3>
+		<form>
+			<input id="youtubeLink" type="text" placeholder="동영상링크를 붙여 넣어 주세요" />
+			<input class="playBtn" type="button" value="" onclick="loadYtb()">
+		</form>
 	</div>
 	
 	<!-- 본문 상단(오른쪽) -->
@@ -39,10 +33,10 @@
 	<!-- 본문 하단 -->
 	<div class="main-bottom">
 		<p>
-			<input id="newItem" type="text" placeholder="00:00:00" />
+			<input id="newItem" type="text" onclick="resetBox()" placeholder="(입력 양식) 00:00:00 메모사항" />
 			<input id="inputBtn" type="button" onclick="createNewList()"/>
+			<span id="bookMarkCk">북마크 정보를 입력해주세요</span>
 		</p>
-		
 		<ul id="bookMarks">
 		</ul>
 	</div>

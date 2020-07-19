@@ -11,33 +11,46 @@ function loadYtb(){
 // 북마크 리스트 작성
 var listIndex = 0;
 function createNewList(){
-	var inputItem = document.getElementById("newItem");
+	var inputItem = document.getElementById("newItem").value;
 	var bookMarkList = document.getElementById("bookMarks")
+	
+	// 북마크 입력값 유효성 검사
+	var inhour = Number(inputItem.substring(0,2));
+	var inmin = Number(inputItem.substring(3,5));
+	var insec = Number(inputItem.substring(6,8));
+	
+	if(inputItem == null || inputItem == ""
+		|| isNaN(inhour) || isNaN(inmin) || isNaN(insec)
+		|| inmin > 60 || insec > 60){
+		document.getElementById("bookMarkCk").innerHTML = "잘못된 입력값 입니다";
+		document.getElementById("bookMarkCk").style.color = "red";
+		inputItem = "";
+		return false;
+	} else{
+		var listItem = document.createElement("li");
+		var inputItem1 = document.createElement("span");
+		var inputItem2 = document.createElement("input");	// 이동 버튼
+		var inputItem3 = document.createElement("input");	// 삭제 버튼
+	
+		inputItem1.id = "bmText" + listIndex;
+		inputItem1.innerHTML = inputItem;
+	
+		inputItem2.type = "button";
+		inputItem2.id = "moveBtn" + listIndex;
+		inputItem2.className = "move";
+	
+		inputItem3.type = "button";
+		inputItem3.id = "deleteBtn" + listIndex;
+		inputItem3.className = "delete";
 		
-	var listItem = document.createElement("li");
-	var inputItem1 = document.createElement("span");
-	var inputItem2 = document.createElement("input");	// 이동 버튼
-	var inputItem3 = document.createElement("input");	// 삭제 버튼
+		listItem.appendChild(inputItem1);
+		listItem.appendChild(inputItem2);
+		listItem.appendChild(inputItem3);
 	
-	inputItem1.id = "bmText" + listIndex;
-	inputItem1.innerHTML = inputItem.value;
+		bookMarkList.appendChild(listItem);
 	
-	inputItem2.type = "button";
-	inputItem2.id = "moveBtn" + listIndex;
-	inputItem2.className = "move";
-	
-	inputItem3.type = "button";
-	inputItem3.id = "deleteBtn" + listIndex;
-	inputItem3.className = "delete";
-		
-	listItem.appendChild(inputItem1);
-	listItem.appendChild(inputItem2);
-	listItem.appendChild(inputItem3);
-	
-	bookMarkList.appendChild(listItem);
-	
-	// 이동 버튼
-	document.getElementById("moveBtn" + listIndex).addEventListener("click", function() {
+		// 이동 버튼
+		document.getElementById("moveBtn" + listIndex).addEventListener("click", function() {
 		var thisText = inputItem1.innerHTML;
 		var hour = Number(thisText.substring(0,2));
 		var min = Number(thisText.substring(3,5));
@@ -46,14 +59,22 @@ function createNewList(){
 		startTime = sum.toString();
 		
 		loadYtb();
-    })
+  		  })
 	
-	// 삭제 버튼
-	document.getElementById("deleteBtn" + listIndex).addEventListener("click", function() {
+		// 삭제 버튼
+		document.getElementById("deleteBtn" + listIndex).addEventListener("click", function() {
 		this.parentElement.remove();
-    });
+  		  });
 
-	listIndex++;
-	inputItem.value = "";
+		listIndex++;
+		inputItem = "";
+	}	
+}
+
+// 입력창 리셋
+function resetBox(){
+	document.getElementById("bookMarkCk").innerHTML = "북마크 정보를 입력해주세요";
+	document.getElementById("bookMarkCk").style.color = "black";
+	document.getElementById("newItem").value = "";
 }
 
