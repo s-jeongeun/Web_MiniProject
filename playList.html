@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Youtube Book Mark Manager</title>
+<link style="text/css" rel="stylesheet" href="./css.css" />
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<!-- 배경 -->
+	<div class="bg"></div>
+	
+	<!-- 본문 상단(왼쪽) -->
+	<div class="main-left">
+		<div class="leftBox"></div>
+		<div class="leftContents">
+			<h3>Youtube Book Mark Manager</h3>
+			<form class ="addrArea" action="#">
+				<input id="youtubeLink" type="text" placeholder="동영상링크를 붙여 넣어 주세요" />
+				<input class="playBtn" type="button" value="" onclick="loadYtb()">
+			</form>
+		</div>
+	</div>
+	
+	<!-- 본문 상단(오른쪽) -->
+	<!-- 유튜브 영상 -->
+	<div class="main-right">		
+		<iframe
+			id = "ytbPlayer" type="text/html" 
+			width="640" height="480" 
+			src=""
+			frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen> 
+		</iframe>
+	</div>
+	
+	<!-- 본문 하단 -->
+	<div class="main-bottom">
+		<p>
+			<input id="newItem" type="text" placeholder="00:00:00" />
+			<input id="inputBtn" type="button" onclick="createNewList()"/>
+		</p>
+		
+		<ul id="bookMarks">
+		</ul>
+	</div>
+</body>
+</html>
+

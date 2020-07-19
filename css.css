@@ -1,0 +1,92 @@
+body{
+	width: 100%;
+	height: 1800px;
+	background-image: url(./images/milkyway.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 80%;
+	position: absolute;
+}
+div{}
+/* .bg{ */
+/* 	width: 1900px; */
+/* 	height: 1800px; */
+/* 	background-image: url(./images/milkyway.jpg); */
+/* 	background-attachment: fixed; */
+/* 	background-position: center; */
+/* 	opacity: 90%; */
+/* 	z-index: 1; */
+/* 	position: absolute; */
+/* } */
+.main-left{
+	width: 30%;
+  	height: 600px;
+  	float:left;
+  	margin-top: 10%;
+	margin-left: 20%;
+	position: relative;
+}
+.leftBox{
+	background-color: white;
+	opacity: 70%;
+}
+.leftContents h3{
+	text-align: center;
+	color: black;
+	font-family: 'East Sea Dokdo', cursive;
+	font-size: 32pt;
+	font-weight: lighter;
+}
+.addrArea{
+	text-align: center;
+}
+#youtubeLink{
+	width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: black;
+    margin-top: 17px;
+}
+.playBtn{
+	width: 65px;
+	height: 50px;
+    background-image: url(./images/youtube_icon.png);
+    border: 0;
+    position: absolute;
+    margin-top: 10px;
+}
+.main-rignt{
+	width: 50%;
+  	height: 600px;
+  	text-align: center;
+  	float:left;
+  	margin-top: 150px;
+	background-color: aqua;
+	position: relative;
+}
+.main-bottom{
+	width: 80%;
+  	height: 800px;
+  	float:left;
+	margin-left: 20%;
+	background-color: green;
+	opacity: 80%;
+	position: relative;
+}
+.inputList{
+	text-align: center;
+}
+#trackInfo{
+	width: 500px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: black;
+    margin: 30px;
+}
+.outputList{
+	text-align: center;
+}
