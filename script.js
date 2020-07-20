@@ -1,4 +1,5 @@
 var startTime = 0;
+var autoNum = 0;
 
 // 동영상 불러오기
 function loadYtb(){
@@ -13,7 +14,7 @@ function loadYtb(){
 		url = "";
 	} else{
 		document.getElementById("ytbPlayer").setAttribute("src", 
-		"https://www.youtube.com/embed/" + addr[1] + "?start=" + startTime);
+		"https://www.youtube.com/embed/" + addr[1] + "?autoplay=" + autoNum +"&start=" + startTime);
 	}	
 }
 
@@ -65,6 +66,7 @@ function createNewList(){
 		var sec = Number(thisText.substring(6,8));
 		var sum = (hour * 3600) + (min * 60) + sec;
 		startTime = sum.toString();
+		autoNum = 1;
 		
 		loadYtb();
   		  })
@@ -75,8 +77,9 @@ function createNewList(){
   		  });
 
 		listIndex++;
-		inputItem = "";
 	}	
+	
+	inputItem = "";
 }
 
 // 입력창 리셋
