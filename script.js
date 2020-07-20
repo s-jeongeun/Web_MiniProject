@@ -21,15 +21,15 @@ function loadYtb(){
 // 북마크 리스트 작성
 var listIndex = 0;
 function createNewList(){
-	var inputItem = document.getElementById("newItem").value;
+	var inputItem = document.getElementById("newItem");
 	var bookMarkList = document.getElementById("bookMarks")
 	
 	// 북마크 입력값 유효성 검사
-	var inhour = Number(inputItem.substring(0,2));
-	var inmin = Number(inputItem.substring(3,5));
-	var insec = Number(inputItem.substring(6,8));
+	var inhour = Number(inputItem.value.substring(0,2));
+	var inmin = Number(inputItem.value.substring(3,5));
+	var insec = Number(inputItem.value.substring(6,8));
 	
-	if(inputItem == null || inputItem == ""
+	if(inputItem.value == null || inputItem.value == ""
 		|| isNaN(inhour) || isNaN(inmin) || isNaN(insec)
 		|| inmin > 60 || insec > 60){
 		document.getElementById("bookMarkCk").innerHTML = "잘못된 입력값 입니다";
@@ -42,7 +42,7 @@ function createNewList(){
 		var inputItem3 = document.createElement("input");	// 삭제 버튼
 	
 		inputItem1.id = "bmText" + listIndex;
-		inputItem1.innerHTML = inputItem;
+		inputItem1.innerHTML = inputItem.value;
 	
 		inputItem2.type = "button";
 		inputItem2.id = "moveBtn" + listIndex;
@@ -77,9 +77,9 @@ function createNewList(){
   		  });
 
 		listIndex++;
-	}	
-	
-	inputItem = "";
+		inputItem.value = "";
+	}
+
 }
 
 // 입력창 리셋
