@@ -4,7 +4,7 @@ var startTime = 0;
 function loadYtb(){
 	var url = document.getElementById("youtubeLink").value;
 	var addr = url.split("=");
-	console.log(addr[0]);
+	
 	// 유튜브 주소 유효성 검사
 	if(url == null || url == ""
 		|| addr[0] != "https://www.youtube.com/watch?v"){
