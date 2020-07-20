@@ -3,15 +3,15 @@ var autoNum = 0;
 
 // 동영상 불러오기
 function loadYtb(){
-	var url = document.getElementById("youtubeLink").value;
-	var addr = url.split("=");
+	var url = document.getElementById("youtubeLink");
+	var addr = url.value.split("=");
 	
 	// 유튜브 주소 유효성 검사
-	if(url == null || url == ""
+	if(url.value == null || url.value == ""
 		|| addr[0] != "https://www.youtube.com/watch?v"){
 		document.getElementById("ytbCk").innerHTML = "잘못된 주소 입니다";
 		document.getElementById("ytbCk").style.color = "red";
-		url = "";
+		url.value = "";
 	} else{
 		document.getElementById("ytbPlayer").setAttribute("src", 
 		"https://www.youtube.com/embed/" + addr[1] + "?autoplay=" + autoNum +"&start=" + startTime);
