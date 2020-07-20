@@ -80,10 +80,16 @@ function createNewList(){
 }
 
 // 입력창 리셋
-function resetBox(){
+function resetBox1(){
+	if(document.getElementById("ytbCk").innerHTML == "잘못된 주소 입니다"){
+		document.getElementById("ytbCk").innerHTML = "";
+		document.getElementById("youtubeLink").value = "";
+	}
+}
+
+function resetBox2(){
 	if(document.getElementById("bookMarkCk").innerHTML == "잘못된 입력값 입니다"){
 		document.getElementById("bookMarkCk").innerHTML = "";
-		document.getElementById("bookMarkCk").style.color = "black";
 		document.getElementById("newItem").value = "";
 	}
 }

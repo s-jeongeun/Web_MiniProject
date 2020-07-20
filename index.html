@@ -16,7 +16,7 @@
 		<div class="main-left">
 			<h3>Youtube Book Mark Manager</h3>
 			<form>
-				<input id="youtubeLink" type="text" placeholder="동영상링크를 붙여 넣어 주세요" />
+				<input id="youtubeLink" type="text" onclick="resetBox1()" placeholder="동영상링크를 붙여 넣어 주세요" onKeyDown="enterYtb()" />
 				<input class="playBtn" type="button" value="input" onclick="loadYtb()">
 				<span id="ytbCk"> </span>
 			</form>
@@ -42,7 +42,7 @@
 	<!-- 본문 하단 -->
 	<div class="main-bottom">
 		<p>
-			<input id="newItem" type="text" onclick="resetBox()" placeholder="(입력 양식) 00:00:00 메모사항" onKeyDown="enterItem()" />
+			<input id="newItem" type="text" onclick="resetBox2()" placeholder="(입력 양식) 00:00:00 메모사항" onKeyDown="enterItem()" />
 			<input id="inputBtn" type="button" value="Enter" onclick="createNewList()" />
 			<span id="bookMarkCk"> </span>
 		</p>
