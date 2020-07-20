@@ -4,8 +4,17 @@ var startTime = 0;
 function loadYtb(){
 	var url = document.getElementById("youtubeLink").value;
 	var addr = url.split("=");
-	document.getElementById("ytbPlayer").setAttribute("src", 
+	
+	// 유튜브 주소 유효성 검사
+	if(url == null || url == ""
+		|| addr[0] != "https://www.youtube.com/watch?v="){
+		document.getElementById("ytbCk").innerHTML = "잘못된 주소 입니다";
+		document.getElementById("ytbCk").style.color = "red";
+		url = "";
+	} else{
+		document.getElementById("ytbPlayer").setAttribute("src", 
 		"https://www.youtube.com/embed/" + addr[1] + "?start=" + startTime);
+	}	
 }
 
 // 북마크 리스트 작성
@@ -25,7 +34,6 @@ function createNewList(){
 		document.getElementById("bookMarkCk").innerHTML = "잘못된 입력값 입니다";
 		document.getElementById("bookMarkCk").style.color = "red";
 		inputItem = "";
-		return false;
 	} else{
 		var listItem = document.createElement("li");
 		var inputItem1 = document.createElement("span");
@@ -73,8 +81,21 @@ function createNewList(){
 
 // 입력창 리셋
 function resetBox(){
-	document.getElementById("bookMarkCk").innerHTML = "북마크 정보를 입력해주세요";
-	document.getElementById("bookMarkCk").style.color = "black";
-	document.getElementById("newItem").value = "";
+	if(document.getElementById("bookMarkCk").innerHTML == "잘못된 입력값 입니다"){
+		document.getElementById("bookMarkCk").innerHTML = "";
+		document.getElementById("bookMarkCk").style.color = "black";
+		document.getElementById("newItem").value = "";
+	}
 }
 
+// 엔터키 호환
+function enterYtb(){
+	if(event.keyCode == 13){
+		loadYtb();
+	}
+}
+function enterItem(){
+	if(event.keyCode == 13){
+		createNewList();
+	}
+}

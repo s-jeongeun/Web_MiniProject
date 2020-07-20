@@ -1,0 +1,176 @@
+body{
+	width: 100%;
+	height: 2200px;
+	margin: 0;
+	padding: 0;
+	background-color: #F6F6F6;
+}
+form, p, ul{
+	position: relative;
+	top: 20px;
+	padding-left: 7%;
+	padding-right: 7%;
+	margin: 0;
+	list-style-type: none;
+	text-align: left;
+}
+
+/* @ 레이아웃 @ */
+/* 본문 상단 */
+.main-top{
+	width: 100%;
+	height: 700px;
+	margin: auto;
+	overflow: hidden;
+	background-image: url(./images/top.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* 본문 상단(왼쪽) */
+.main-left{
+	width: 45%;
+	height: 65%;
+  	float:left;
+  	padding-top: 300px;
+	text-align: center;
+	background-color: rgba(0, 10, 40, 0.3);
+}
+
+/*  본문 상단(오른쪽) */
+.main-right{
+	width: 55%;
+  	height: 100%;
+  	float:left;
+  	text-align: center;
+	background-color: rgba(0, 10, 40, 0.3);
+}
+
+/* 본문 중간부 */
+.main-middle{
+	width: 80%;
+  	height: 300px;
+	margin: auto;
+	margin-top: 150px;
+	background-image: url(./images/tv.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+}
+
+/* 본문 하단 */
+.main-bottom{
+	width: 80%;
+  	height: 800px;
+	margin: auto;
+	padding-top: 50px;
+	background-color: rgba(255, 255, 255, 1);
+	position: relative;
+	text-align: center;
+}
+/* //레이아웃 */
+
+/* 제목 */
+.main-left h3{
+	text-align: center;
+	color: white;
+	font-family: 'East Sea Dokdo', cursive;
+	font-size: 36pt;
+	font-weight: lighter;
+	margin-top:0;
+	margin-bottom: 30px;
+}
+
+/* 유튜브  */
+#youtubeLink{
+	width: 85%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 3px solid #648CA5;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 10pt;
+}
+.playBtn{
+	width: 60px;
+	height: 37px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: #648CA5;
+    font-family: 'Nanum Gothic', sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+#ytbCk{
+	width: 200px;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 10pt;
+	position: relative;
+	left: 10px;
+}
+#ytbPlayer{
+	position: relative;
+	top: 110px;
+}
+
+/* 북마크  */
+#newItem{
+	width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 3px solid #648CA5;
+    font-family: 'Nanum Gothic', sans-serif;
+	font-size: 10pt;
+}
+#inputBtn{
+	width: 60px;
+	height: 37px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    background-color: #648CA5;
+    font-family: 'Nanum Gothic', sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+#bookMarkCk{
+	width: 200px;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 10pt;
+	position: relative;
+	left: 10px;
+}
+li{
+	margin-top: 30px;
+	padding-left: 10px;
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 11pt;
+}
+.move{
+	width: 15px;
+	height: 20px;
+    background-image: url(./images/bookmark.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+    position: relative;
+    top: 4px;
+    margin-left: 5px;
+}
+.delete{
+	width: 15px;
+	height: 20px;
+	background-image: url(./images/delete.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+    position: relative;
+    top: 4px;
+    margin-left: 5px;
+}
