@@ -4,10 +4,10 @@ var startTime = 0;
 function loadYtb(){
 	var url = document.getElementById("youtubeLink").value;
 	var addr = url.split("=");
-	
+	console.log(addr[0]);
 	// 유튜브 주소 유효성 검사
 	if(url == null || url == ""
-		|| addr[0] != "https://www.youtube.com/watch?v="){
+		|| addr[0] != "https://www.youtube.com/watch?v"){
 		document.getElementById("ytbCk").innerHTML = "잘못된 주소 입니다";
 		document.getElementById("ytbCk").style.color = "red";
 		url = "";
